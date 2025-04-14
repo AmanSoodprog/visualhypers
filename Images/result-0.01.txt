@@ -1,0 +1,5 @@
+Sample Input:
+Title: Journey to Mars, Genre: Science Fiction
+
+Learning Rate: 0.01
+Generated Description: ["Explore futuristic worlds and advanced technology in 'Journey to Mars'."]

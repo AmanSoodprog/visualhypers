@@ -1,0 +1,681 @@
+/* App.css */
+/* General Styles */
+:root {
+  --primary-color: #3b82f6;
+  --primary-dark: #2563eb;
+  --primary-light: #60a5fa;
+  --secondary-color: #1e3a8a;
+  --text-color: #333;
+  --light-text: #6b7280;
+  --light-bg: #f9fafb;
+  --border-color: #e5e7eb;
+  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --transition: all 0.3s ease;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+  background-color: var(--light-bg);
+  line-height: 1.5;
+}
+
+/* App Container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navigation Styles */
+.main-nav {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link.active {
+  background-color: var(--primary-dark);
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Home Page */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.page-description {
+  max-width: 800px;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--light-text);
+  font-size: 1.125rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+.demo-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: var(--card-shadow);
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.demo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.demo-card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.demo-card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.demo-card-param {
+  font-size: 1rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.demo-card-description {
+  color: var(--light-text);
+}
+
+/* Demo Pages */
+.demo-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.page-header {
+  margin-bottom: 1rem;
+}
+
+.back-button {
+  color: var(--primary-color);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  transition: var(--transition);
+}
+
+.back-button:hover {
+  color: var(--primary-dark);
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.option-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.option-button {
+  padding: 0.5rem 1rem;
+  background-color: #e5e7eb;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 1rem;
+}
+
+.option-button:hover {
+  background-color: #d1d5db;
+}
+
+.option-button.selected {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.content-display {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: var(--card-shadow);
+  margin-top: 1rem;
+}
+
+/* Content Styles */
+.single-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.content-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.text-content {
+  white-space: pre-line;
+  line-height: 1.6;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.comparison-item {
+  border: 1px solid var(--border-color);
+  border-radius: 0.375rem;
+  padding: 1rem;
+}
+
+.comparison-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Image Specific */
+.image-container, .image-container-large {
+  margin-bottom: 1rem;
+}
+
+.result-image, .result-image-large {
+  width: 100%;
+  border-radius: 0.375rem;
+  display: block;
+}
+
+.image-description {
+  font-size: 0.9rem;
+  color: var(--light-text);
+}
+
+/* Audio Specific */
+.audio-container, .audio-container-large {
+  margin-bottom: 1rem;
+}
+
+.audio-player, .audio-player-large {
+  width: 100%;
+}
+
+.audio-description {
+  font-size: 0.9rem;
+  color: var(--light-text);
+}
+
+/* Footer */
+.main-footer {
+  background-color: #e5e7eb;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--light-text);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .nav-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+/* Create placeholder images */
+[src^="/placeholder-"] {
+  background-color: #f3f4f6;
+  min-height: 200px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af;
+}
+
+[src^="/placeholder-"]::before {
+  content: "Image Placeholder";
+}
+
+/* Create placeholder audio player style when audio source is not available */
+audio:not([src]) {
+  display: block;
+  width: 100%;
+  height: 54px;
+  background-color: #f3f4f6;
+  border-radius: 0.375rem;
+}
+
+/* Center the learning rate description */
+.page-description {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+}
+
+/* Styling for the generated result section */
+.result-title {
+  margin-top: 30px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Validation images container */
+.validation-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.validation-image-container {
+  flex: 1;
+  min-width: 300px;
+  max-width: 450px;
+  text-align: center;
+}
+
+.validation-image-container h4 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.validation-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* When in comparison mode */
+.comparison-item .validation-images {
+  margin-top: 15px;
+}
+
+.comparison-item .validation-image-container {
+  min-width: 200px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .validation-images {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .validation-image-container {
+    width: 100%;
+  }
+}
+/* Updated CSS styles for side-by-side centered combined graphs */
+
+.combined-graphs-section {
+  width: 100%;
+  margin-top: 40px;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  color: #333;
+  width: 100%;
+}
+
+.combined-graphs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 20px;
+  width: 100%;
+  align-items: center;
+}
+
+.combined-graph {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.combined-graph h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.combined-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Query for larger screens */
+@media (min-width: 992px) {
+  .combined-graphs-container {
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .combined-graph {
+    width: 45%; 
+    max-width: 600px;
+  }
+}
+/* CSS to center only the Combined Graphs section without affecting other content */
+
+.combined-graphs-section {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto; /* This centers the container horizontally */
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.combined-graphs-section .section-title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  color: #333;
+  width: 100%;
+}
+
+.combined-graphs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 20px;
+  width: 100%;
+  align-items: center;
+}
+
+.combined-graph {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.combined-graph h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.combined-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Query for larger screens */
+@media (min-width: 992px) {
+  .combined-graphs-container {
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .combined-graph {
+    width: 48%; 
+    max-width: 550px;
+  }
+}
+/* Add these CSS styles to your App.css file */
+
+/* Image grid styles for the optimizer images */
+.image-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.image-item {
+  flex: 1 1 30%;
+  min-width: 200px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f8f8f8;
+  padding-bottom: 10px;
+}
+
+.image-item h4 {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.optimizer-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+/* Styles for single optimizer view */
+.single-optimizer-images {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .single-optimizer-images .image-grid {
+    flex-direction: row;
+  }
+  
+  .single-optimizer-images .image-item {
+    flex: 1 1 30%;
+  }
+}
+
+/* Adjust comparison grid for multiple images */
+.comparison-grid .image-grid {
+  margin-top: 15px;
+}
+
+.comparison-item {
+  padding: 20px;
+  margin-bottom: 30px;
+}
+/* Add these CSS styles to your App.css file to support the new audio visualizations */
+
+.audio-analysis-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.audio-container {
+  width: 100%;
+  margin: 15px 0;
+  text-align: center;
+}
+
+.audio-player {
+  width: 80%;
+  max-width: 500px;
+}
+
+.audio-player-large {
+  width: 90%;
+  max-width: 600px;
+}
+
+.audio-visualizations {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.visualization-item {
+  flex: 1 1 45%;
+  min-width: 300px;
+  text-align: center;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.visualization-item h4 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.audio-visualization-image {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+/* Responsive adjustments for comparison view */
+@media (max-width: 768px) {
+  .visualization-item {
+    flex: 1 1 100%;
+  }
+  
+  .audio-visualizations {
+    flex-direction: column;
+  }
+}
+
+/* Additional styles for comparison view */
+.comparison-grid .audio-analysis-container {
+  margin-bottom: 15px;
+}
+
+.comparison-grid .audio-player {
+  width: 90%;
+}
+
+.comparison-grid .visualization-item {
+  min-width: 200px;
+}
+
+.comparison-grid .audio-visualizations {
+  margin: 10px 0;
+}

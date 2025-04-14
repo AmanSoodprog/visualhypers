@@ -1,0 +1,5 @@
+Sample Input:
+Title: Journey to Mars, Genre: Science Fiction
+
+Learning Rate: 0.5
+Generated Description: ["A magical adventure awaits in 'Love in the Air', filled with mythical creatures and epic battles."]
